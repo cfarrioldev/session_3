@@ -1,0 +1,5 @@
+<!-- Aqui aprenderemos a utilizar la vinculacion de un componente padre con su hijo a traves del decorador @Input() -->
+<div [class.modo-oscuro]="modoOscuro">
+  <app-toolbar  (enviarOrdenParaCambiarFondo)="recibirOrdenParaCambiarElFondo($event)" [productosRecibidosDeMiSobrino]="productosSeleccionados"></app-toolbar>
+  <app-product-list (recibirDeMiHijoParaEnviarAMiPadre)="recibirProductoDeMiNietoATravesDeMiHijo($event)"></app-product-list>
+</div>
